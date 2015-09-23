@@ -1,7 +1,9 @@
-tacoBout.controller('AnswersCtrl', function AnswersCtrl($scope, $stateParams, QuestionsFactory, UtilitesFactory) {
+tacoBout.controller('AnswersCtrl', function AnswersCtrl($scope, $stateParams, QuestionsFactory, UtilitiesFactory) {
   $scope.question = UtilitiesFactory.findById(QuestionsFactory.questions, $stateParams.questionId)
   $scope.addAnswer = function() {
-    $scope.question.answers.push ({ name: $scope.answerName });
-    $scope.studentName = null;
+    // console.log(answerName);
+    $scope.question.answers.push({ name: $scope.answerName });
+    $scope.answerName = null;
+    console.log($scope.question.answers[0]);
   }
 });

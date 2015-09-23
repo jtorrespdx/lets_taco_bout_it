@@ -1,17 +1,17 @@
-<divng-show="question.answers.length">
-  <h2>Answers to: {{ question.answer }}</h2>
+<div ng-show="question.answers.length">
+  <h2>Answers to: {{ question.name }}</h2>
   <ul>
     <li ng-repeat="item in question.answers">
-    {{ item.answer }}
+    {{ item.name }}
     </li>
   </ul>
 </div>
 
 <div>
-  <h2>Your answer to: {{ question.answer }}</h2>
+  <h2>Your answer to: {{ question.name }}</h2>
   <form ng-submit="addAnswer()" class="form-inline" role="form">
     <div class = "form-group">
-      <input type="text" ng-model="AnswerName" class="form-control" placeholder= "Have an answer?">
+      <input type="text" ng-model="answerName" class="form-control" placeholder= "Have an answer?">
     </div>
     <button type="submit" class="btn-btn-danger">Submit</button>
   </form>
