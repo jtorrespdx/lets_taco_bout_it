@@ -11,4 +11,10 @@ tacoBout.config(function($stateProvider, $urlRouterProvider) {
     templateUrl: "partials/questions.html",
     controller: 'QuestionsCtrl'
   });
+
+  $stateProvider.state('answers', {
+    url: "/answers",
+    templateUrl: "partials/answers.html",
+    controller: 'AnswersCtrl'
+  });
 });
