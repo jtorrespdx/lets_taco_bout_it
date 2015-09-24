@@ -1,21 +1,26 @@
 
-<div class="col-md-4">
-  <h1>Add a new question</h1>
+<div class="centered-text">
+  <h1 class="animated infinite pulse">Need to taco bout it? Ask our taco experts!</h1>
   <form ng-submit="QuestionsFactory.addQuestion()" class="form-inline" role="form">
     <div class="form-group">
-      <input type="text" ng-model="QuestionsFactory.questionName" class="form-control" placeholder="Enter a question">
+      <input type="text" ng-model="QuestionsFactory.questionName" class="form-control" placeholder="What is your question?">
     </div>
     <button type="submit" class="btn btn-warning">TACO!</button>
   </form>
 </div>
-
-<div class="col-md-4" ng-show="questions.length">
-  <h3>Other taco talk:</h3>
+<br>
+<div class="centered-text" ng-show="questions.length">
+  <h2 class="titles">Other taco talk:</h2>
   <ul>
-    <li ng-repeat="item in questions">
+    <li ng-repeat="item in questions | filter:QuestionsFactory.questionName | filter:item.answered = true">
       <a ui-sref="questions.answers({ questionId: item.id })">{{ item.name }}</a>
     </li>
-    <!-- <li>What is the difference between red and green sauce?</li> -->
+  </ul>
+  <h2 class="titles">Are you a taco expert? Please help us answer these tasty questions!</h2>
+  <ul>
+    <li ng-repeat="item in questions | filter:QuestionsFactory.questionName | filter:item.answered = false">
+      <a ui-sref="questions.answers({ questionId: item.id })">{{ item.name }}</a>
+    </li>
   </ul>
 </div>
 

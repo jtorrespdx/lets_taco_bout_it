@@ -1,0 +1,19 @@
+body {
+    background-image: url("http://i.imgur.com/7nWmQjZ.jpg");
+    color: white;
+    height: 100%;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.centered-text {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+
+}
