@@ -1,5 +1,5 @@
 <div ng-show="question.answers.length">
-  <h2>Answers to: {{ question.name }}</h2>
+  <h2>What other tacophiles think about  "{{ question.name }}"</h2>
   <ul>
     <li ng-repeat="item in question.answers">
     {{ item.name }}
@@ -8,7 +8,7 @@
 </div>
 
 <div>
-  <h2>Your answer to: {{ question.name }}</h2>
+  <h2>Your two tacos: {{ question.name }}</h2>
   <form ng-submit="addAnswer()" class="form-inline" role="form">
     <div class = "form-group">
       <input type="text" ng-model="answerName" class="form-control" placeholder= "Have an answer?">

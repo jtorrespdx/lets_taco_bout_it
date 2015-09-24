@@ -1,0 +1,10 @@
+***As a user, I want to be able to post a question.
+***As an expert I want to be able to answer a question.
+*As an expert I want to be able to filter out questions that have already been answered.
+------->use search field as submit field?
+As a user, I want to approve answers, and give a rating based on how well my question was answered.
+As a user I want to be able to "upvote" the best answers I read.
+As a user, I want the links with the most upvotes to be listed first, so that I can see the best answers that have been submitted.
+*As a user I want a search function, so I don't post a question someone has already asked.
+As a user, I want to comment on a link, so that I can have a discussion about the answer that an expert submitted.
+Bonus points for making it look good!
