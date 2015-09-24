@@ -11,11 +11,12 @@
 <br>
 <div class="centered-text" ng-show="questions.length">
   <h2 class="titles">Other taco talk:</h2>
-  <ul>
+  <ul class="text-center">
     <li ng-repeat="item in questions | filter:QuestionsFactory.questionName | filter:item.answered = true">
       <a ui-sref="questions.answers({ questionId: item.id })">{{ item.name }}</a>
     </li>
   </ul>
+<div ui-view> </div>
   <h2 class="titles">Are you a taco expert? Please help us answer these tasty questions!</h2>
   <ul>
     <li ng-repeat="item in questions | filter:QuestionsFactory.questionName | filter:item.answered = false">
@@ -23,5 +24,3 @@
     </li>
   </ul>
 </div>
-
-<div ui-view> </div>
